@@ -1,0 +1,20 @@
+{
+    "name": "Instagram Autofill",
+    "version": "3.0",
+    "description": "Generate your captions with AI",
+    "manifest_version": 3,
+    "author": "Mia Dixon",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "declarativeContent",
+        "scripting",
+        "https://www.instagram.com/",
+        "http://localhost:5000/"
+      ],
+    "action": {
+        "default_popup": "./client/index.html"
+      }
+
+  
+} 

@@ -1,0 +1,7 @@
+# api keys
+.env 
+google-cloud-sdk
+server/venv
+*.pyc
+client/google-cloud-cli-454.0.0-darwin-x86_64.tar.gz
+server/visual-captions-7c09483c6cc4.json
