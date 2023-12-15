@@ -1,14 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS  
 from image_to_bytes import data_url_to_bytes
+from image_parsing import image_to_text
+from generate_insta_caption import generate_instagram_caption 
 
 app = Flask(__name__)
 CORS(app)  
 
-from imageParsing import image_to_text
-from generateInstaCaption import generate_instagram_caption 
-
-@app.route('/process_image', methods=['POST'])
+@app.route('https://insta-generator.vercel.app/process_image', methods=['POST'])
 def process_image():
     # Get the image URL from the POST request
     image_url = request.json.get('image_url') #[5:]

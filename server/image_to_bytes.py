@@ -3,6 +3,7 @@ from io import BytesIO
 from PIL import Image
 
 def data_url_to_bytes(data_url):
+    # print(data_url)
     try:
         # Split the data URL to get the encoding type and data
         _, encoded_data = data_url.split(',', 1)

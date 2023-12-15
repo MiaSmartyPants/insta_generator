@@ -1,3 +1,5 @@
+import { displayCaption } from "./displayCaption.js";
+
 export function capturePic() {
   chrome.tabs.query(
     { active: true, windowId: chrome.windows.WINDOW_ID_CURRENT },
@@ -26,7 +28,7 @@ export function capturePic() {
               const dataUrl = reader.result;
 
               // Make an HTTP POST request to your Python server
-              fetch('http://localhost:5000/process_image', {
+              fetch('https://insta-generator.vercel.app/process_image', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -38,9 +40,8 @@ export function capturePic() {
                 if (data.caption) {
                   // Display the generated caption in your extension popup or content script
                   const generatedCaption = data.caption;
-                  console.log("Generated Caption:", generatedCaption);
-
-                  document.getElementById('caption-element').textContent = generatedCaption;
+                  displayCaption(generatedCaption)
+                  // console.log("Generated Caption:", generatedCaption);
                 } else {
                   console.log("Caption not found in the response.");
                 }

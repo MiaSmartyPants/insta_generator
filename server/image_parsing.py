@@ -65,6 +65,7 @@ def image_to_text(source_image_bytes):
         # Optional:
         number_of_results=2,
         language="en",
+        
     )
     # print('image-to-text', captions)
     return captions
