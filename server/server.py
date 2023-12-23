@@ -7,7 +7,7 @@ from generate_insta_caption import generate_instagram_caption
 app = Flask(__name__)
 CORS(app)  
 
-@app.route('https://insta-generator.vercel.app/process_image', methods=['POST'])
+@app.route('/process_image', methods=['POST'])
 def process_image():
     # Get the image URL from the POST request
     image_url = request.json.get('image_url') #[5:]
