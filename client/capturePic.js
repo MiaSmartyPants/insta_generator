@@ -28,7 +28,7 @@ export function capturePic() {
               const dataUrl = reader.result;
 
               // Make an HTTP POST request to your Python server
-              fetch('https://insta-generator.vercel.app/process_image', {
+              fetch('http://localhost:5000/process_image', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
