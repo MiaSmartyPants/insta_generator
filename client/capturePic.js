@@ -7,9 +7,23 @@ export function capturePic() {
       const { id: tabId } = tabs[0];
 
       const getPicElement = () => {
-        let pictureElement = document.querySelector("._aazh");
-        let pictureUrl = pictureElement ? pictureElement.src : null;
-        return pictureUrl;
+        // let pictureElement = document.getElementsByClassName("x5yr21d x11njtxf xh8yej3")[24]
+        // // let pictureElement = document.querySelector("._aazh");
+        // let pictureUrl = pictureElement ? pictureElement.src : null;
+        // console.log(pictureUrl, pictureElement)
+        let array = document.getElementsByClassName("x5yr21d x11njtxf xh8yej3")
+        for (let i = 0; i < array.length; i++) {
+            // Check if the current element is an image with the desired class name
+            if (array[i].src && array[i].className === 'x5yr21d x11njtxf xh8yej3') {
+                // Get the value of the src attribute
+                const pictureUrl = array[i].src;
+                
+                console.log('working',pictureUrl); // Output: URL of the image you want
+                // You can break the loop if you only need to select the first matching image
+                return pictureUrl;
+              }
+        }
+        
       }
 
       chrome.scripting.executeScript(
@@ -19,6 +33,7 @@ export function capturePic() {
         },
         async (result) => {
           const pictureUrl = result[0]['result'];
+          console.log(result)
           if (pictureUrl) {
             // Convert blob URL to data URL
             const blobData = await fetch(pictureUrl).then(response => response.blob());
