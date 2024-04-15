@@ -15,8 +15,8 @@ distro==1.9.0
 Flask==2.3.2
 Flask-Cors==4.0.0
 frozenlist==1.4.0
-google-api-core>=2.14.0,<3.0.0g
-oogle-auth==2.23.4
+google-api-core>=2.14.0,<3.0.0
+google-auth==2.23.4
 google-cloud-aiplatform>=1.36.2,<2.0.0
 google-cloud-bigquery>=3.13.0,<4.0.0
 google-cloud-core==2.3.3
