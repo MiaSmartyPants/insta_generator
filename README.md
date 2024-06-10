@@ -1,5 +1,7 @@
 # Instagram Caption Generator
 Use this AI Chrome Extension to create an instagram caption in under 10 seconds. 
+<br></br>
+The AI Instagram Caption Generator is a recent project that utilizes advanced technologies such as Vertex AI, Google Cloud Platform, and Open AI to generate suitable captions for Instagram. With just a press of a button, the system recognizes and processes the image, and within 10 seconds, this tool provides users with trendy and relevant captions, complete with hashtags and emojis, allowing for an effortless and engaging Instagram post.
 
 ## Demo
 https://github.com/MiaSmartyPants/insta_generator/assets/106205169/74104283-bcc3-4146-8bc4-7944ccfa9644
